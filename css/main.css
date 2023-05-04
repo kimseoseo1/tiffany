@@ -1,0 +1,1296 @@
+@charset 'utf-8';
+@font-face{
+    font-family: 'Californian FB';
+    src: url(../fonts/AnyConv.com__Californian-FB-Regular.woff2) format('woff2'),
+    url(../fonts/Californian-FB-Regular.woff) format('woff'), 
+    url(../fonts/Californian\ FB\ Regular.ttf) format('ttf');
+    font-style: normal;
+}
+@font-face{
+    font-family: 'NotoSansKRThin';
+    src: url(../fonts/NotoSansKR-Thin.woff2) format('woff2'),
+    url(../fonts/NotoSansKR-Thin.woff) format('woff'), 
+    url(../fonts/NotoSansKR-Thin.otf) format('otf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'BookAntiqua';
+    src: url(../fonts/AnyConv.com__Book-Antiqua-Font.woff2) format('woff2'),
+    url(../fonts/Book-Antiqua-Font.woff) format('woff'), 
+    url(../fonts/Book\ Antiqua\ Font.ttf) format('ttf');
+    font-style: normal;
+}
+
+
+/* 초기화 */
+* {margin: 0; padding: 0; box-sizing: border-box}
+ul, li {list-style: none;}
+img {vertical-align: middle; border: 0;}
+a {color: #222; text-decoration: none;}
+.hidden{height: 100%; overflow: hidden;}
+
+/* 공통클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    overflow-x: hidden;
+}
+.inner {
+    /* overflow: hidden; */
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.txt01 , .txt02, .txt03{
+    cursor: pointer;
+}
+
+
+/* ---------------header-------------- */
+.header{}
+.header .inner{
+    padding-top: 60px;
+    /* width: 95%; */
+    width: 100%;
+    /* height: auto; */
+    height: 937px;
+    position: relative;
+}
+.header .inner .header-menu{
+    /* width: 1750px; */
+    width: 96%;
+    margin: 0 auto;
+    height: 47px;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo-box */
+.header .inner .header-menu .logo-box{
+    width: 297px;
+    height: 37px;
+    float: left;
+}
+
+/* gnb-menu */
+.header .inner .header-menu .gnb-menu{
+    float: left;
+}
+.header .inner .gnb-menu .main-menu{
+    width: 1220px;
+    /* width: 1000px; */
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    font-family: 'Californian FB';
+    font-size: 25px;
+}
+.header .inner .gnb-menu .main-menu > li{
+    float: left;
+    /* background: yellowgreen; */
+    text-align: center;
+    position: relative;
+    padding-top: 0.7%;
+}
+.header .inner .gnb-menu .main-menu > li .main-menutxt{
+    transition: .5s;
+}
+.header .inner .gnb-menu .main-menu > li .main-menutxt:hover{
+    color: #00a4b7;
+}
+.header .inner .gnb-menu .main-menu > li:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.header .inner .gnb-menu .main-menu > li .sub-menu{
+    height: 400px;
+    z-index: 99;
+    padding-top: 36px;
+    font-size: 22px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.header .inner .gnb-menu .main-menu > li .sub-menu > li{
+    padding-top: 30px;
+}
+.header .inner .gnb-menu .main-menu > li .sub-menu > li:first-child{
+    padding-top: 0;
+}
+.header .inner .gnb-menu .main-menu > li .sub-menu > li > a:hover{
+    color: #00a4b7;
+    transition: .3s;
+}
+
+.header .inner .header-menu .quick-menu{
+    width: 145px;
+    float: right;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+}
+.header .inner .header-menu .quick-menu a{
+    position: relative;
+    z-index: 99;
+}
+.header .inner .header-menu .quick-menu a .icons{
+    width: 18px;
+    height: 18px;
+    transition: .5s;
+    position: absolute;
+    top: 10px;
+}
+
+.header .inner .header-menu .quick-menu a .search-icon{
+    background: url(../images/quick1.png)no-repeat center/contain;
+    scale: .9;
+}
+.header .inner .header-menu .quick-menu a .search-icon:hover{
+    background: url(../images/quick1-hover.png)no-repeat center/contain;
+}
+
+.header .inner .header-menu .quick-menu a .wishlist-icon{
+    background: url(../images/quick2.png)no-repeat center/contain;
+}
+.header .inner .header-menu .quick-menu a .wishlist-icon:hover{
+    background: url(../images/quick2-hover.png)no-repeat center/contain;
+}
+
+.header .inner .header-menu .quick-menu a .my-icon{
+    background: url(../images/quick3.png)no-repeat center/contain;
+}
+.header .inner .header-menu .quick-menu a .my-icon:hover{
+    background: url(../images/quick3-hover.png)no-repeat center/contain;
+}
+
+.header .inner .header-menu .quick-menu a .concierge-icon{
+    background: url(../images/quick4.png)no-repeat center/contain;
+}
+.header .inner .header-menu .quick-menu a .concierge-icon:hover{
+    background: url(../images/quick4-hover.png)no-repeat center/contain;
+}
+
+/* visual-background */
+.header .inner video{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* --------------section01--------------- */
+.section01 .inner{
+    /* width: 1769px; */
+    width: 92%;
+    height: 4430px;
+    margin-top: 452px;
+    margin-bottom: 439px;
+}
+/* section01-right */
+.section01 .inner .section01-right{
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.section01 .inner .section01-right .section01-img{
+    max-width: 880px;
+    width: 100%;
+    height: 970px;
+    background: url(../images/product_01/productmainimg.jpg)no-repeat;
+    background-size: 100%;
+    position: sticky;
+    top: 0;
+}
+.section01 .inner .section01-right .section01-img .section01-img-inner{
+    height: auto;
+}
+
+/* section01-left */
+.section01 .inner .section01-left{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.section01 .inner .section01-left .newbox-txt{
+    width: 582px;
+    /* background: palevioletred; */
+    padding-top: 362px;
+    margin: 0 auto;
+}
+.section01 .inner .section01-left .newbox-txt h3{
+    font-size: 29px;
+    text-align: center;
+    font-family: 'Californian FB';
+    padding-bottom: 36px;
+}
+.section01 .inner .section01-left .newbox-txt h3 span{
+    font-size: 31px;
+    color: #00a4b7;
+}
+.section01 .inner .section01-left .newbox-txt p{
+    font-size: 15px;
+    text-align: center;
+    font-family: 'NotoSansKRThin';
+    padding-bottom: 60px;
+}
+.section01 .inner .section01-left .newbox-img{
+    background: url(../images/product_01/productnewimg.jpg)no-repeat;
+    background-size: 100%;
+    max-width: 582px;
+    width: 100%;
+    height: 695px;
+    margin: 0 auto;
+}
+
+/* product01 */
+.section01 .inner .section01-left .product01{
+    padding-top: 426px;
+    max-width: 582px;
+    /* background: blue; */
+    margin: 0 auto;
+}
+.section01 .inner .section01-left .product01:hover .product01-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section01 .inner .section01-left .product01 .product01-img{
+    width: 100%;
+    height: 395px;
+}
+.section01 .inner .section01-left .product01 .product01-img > img{
+    width: 100%;
+}
+
+.section01 .inner .section01-left .product01 .product01-text{
+    padding-top: 21px;
+}
+.section01 .inner .section01-left .product01 span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section01 .inner .section01-left .product01 .txt01{
+    font-size: 23px;
+}
+.section01 .inner .section01-left .product01 .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section01 .inner .section01-left .product01 .txt03{
+    font-size: 18px;
+    float: right;
+}
+
+/* product02 */
+.section01 .inner .section01-left .product02{
+    padding-top: 420px;
+    max-width: 582px;
+    /* background: orange; */
+    margin: 0 auto;
+}
+.section01 .inner .section01-left .product02:hover .product02-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+
+.section01 .inner .section01-left .product02 .product02-img{
+    width: 100%;
+    height: 395px;
+}
+.section01 .inner .section01-left .product02 .product02-img > img{
+    width: 100%;
+}
+.section01 .inner .section01-left .product02 .product02-text{
+    padding-top: 21px;
+}
+.section01 .inner .section01-left .product02 span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section01 .inner .section01-left .product02 .txt01{
+    font-size: 23px;
+}
+.section01 .inner .section01-left .product02 .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section01 .inner .section01-left .product02 .txt03{
+    font-size: 18px;
+    float: right;
+}
+
+/* product03 */
+.section01 .inner .section01-left .product03-allbox{
+    /* width: 100%; */
+    padding-top: 393px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-top{
+    display: flex;
+    justify-content: space-between;
+}
+.section01 .inner .section01-left .product03-allbox .product03-allbox-img{
+    width: 100%;
+    height: 403px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-allbox-img > img{
+    width: 100%;
+}
+/* 3-1 */
+.section01 .inner .section01-left .product03-allbox .product03-1{
+    /* float: left; */
+    padding: 2%;
+}
+.section01 .inner .section01-left .product03-allbox .product03-1:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section01 .inner .section01-left .product03-allbox .product03-1 .product03-text{
+    padding-top: 21px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-1 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section01 .inner .section01-left .product03-allbox .product03-1 .product03-text .txt01{
+    font-size: 23px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-1 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-1 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* 3-2 */
+.section01 .inner .section01-left .product03-allbox .product03-2{
+    /* float: left; */
+    padding: 2%;
+}
+.section01 .inner .section01-left .product03-allbox .product03-2:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section01 .inner .section01-left .product03-allbox .product03-2 .product03-text{
+    padding-top: 21px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-2 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section01 .inner .section01-left .product03-allbox .product03-2 .product03-text .txt01{
+    font-size: 23px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-2 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-2 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* 3-3 */
+.section01 .inner .section01-left .product03-allbox .product03-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.section01 .inner .section01-left .product03-allbox .product03-3{
+    /* float: left; */
+    padding: 2%;
+}
+.section01 .inner .section01-left .product03-allbox .product03-3:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section01 .inner .section01-left .product03-allbox .product03-3 .product03-text{
+    padding-top: 21px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-3 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section01 .inner .section01-left .product03-allbox .product03-3 .product03-text .txt01{
+    font-size: 23px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-3 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-3 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* 3-4 */
+.section01 .inner .section01-left .product03-allbox .product03-4{
+    /* float: left; */
+    padding: 2%;
+}
+.section01 .inner .section01-left .product03-allbox .product03-4:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section01 .inner .section01-left .product03-allbox .product03-4 .product03-text{
+    padding-top: 21px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-4 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section01 .inner .section01-left .product03-allbox .product03-4 .product03-text .txt01{
+    font-size: 23px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-4 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section01 .inner .section01-left .product03-allbox .product03-4 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+
+
+/* --------------section02-visual--------------- */
+.visual .inner{
+    width: 92%;
+    height: 969px;
+    position: relative;
+}
+.visual .inner .visual-video{
+    width: 100%;
+}
+.visual .inner .visual-video video{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* --------------section02--------------- */
+.section02 .inner{
+    width: 92%;
+    height: 3188px;
+    margin-top: 348px;
+}
+
+/* section02-right */
+.section02 .inner .section02-left{
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+
+/* section02-left */
+.section02 .inner .section02-right{
+    width: 50%;
+    height: 103%;
+    float: right;
+}
+.section02 .inner .section02-right .section02-img{
+    max-width: 880px;
+    width: 100%;
+    height: 970px;
+    background: url(../images/product_01/section02-mainimg.jpg)no-repeat;
+    background-size: 100%;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+.section02 .inner .section02-right .section02-img .section02-img-inner{
+    height: auto;
+}
+
+
+
+/* product01 */
+.section02 .inner .section02-left .product01{
+    padding-top: 426px;
+    max-width: 582px;
+    /* background: blue; */
+    margin: 0 auto;
+}
+.section02 .inner .section02-left .product01:hover .product01-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section02 .inner .section02-left .product01 .product01-img{
+    width: 100%;
+    height: 395px;
+}
+.section02 .inner .section02-left .product01 .product01-img > img{
+    width: 100%;
+}
+
+.section02 .inner .section02-left .product01 .product01-text{
+    padding-top: 21px;
+}
+.section02 .inner .section02-left .product01 span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section02 .inner .section02-left .product01 .txt01{
+    font-size: 23px;
+}
+.section02 .inner .section02-left .product01 .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section02 .inner .section02-left .product01 .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* product02 */
+.section02 .inner .section02-left .product02{
+    padding-top: 420px;
+    max-width: 582px;
+    /* background: orange; */
+    margin: 0 auto;
+}
+.section02 .inner .section02-left .product02:hover .product02-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section02 .inner .section02-left .product02 .product02-img{
+    width: 100%;
+    height: 395px;
+}
+.section02 .inner .section02-left .product02 .product02-img > img{
+    width: 100%;
+}
+.section02 .inner .section02-left .product02 .product02-text{
+    padding-top: 21px;
+}
+.section02 .inner .section02-left .product02 span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section02 .inner .section02-left .product02 .txt01{
+    font-size: 23px;
+}
+.section02 .inner .section02-left .product02 .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section02 .inner .section02-left .product02 .txt03{
+    font-size: 18px;
+    float: right;
+}
+
+/* product03 */
+.section02 .inner .section02-left .product03-allbox{
+    /* width: 100%; */
+    padding-top: 387px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-top{
+    display: flex;
+    justify-content: space-between;
+}
+.section02 .inner .section02-left .product03-allbox .product03-allbox-img{
+    width: 100%;
+    height: 403px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-allbox-img > img{
+    width: 100%;
+}
+/* 3-1 */
+.section02 .inner .section02-left .product03-allbox .product03-1{
+    /* float: left; */
+    padding: 2%;
+}
+.section02 .inner .section02-left .product03-allbox .product03-1:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section02 .inner .section02-left .product03-allbox .product03-1 .product03-text{
+    padding-top: 21px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-1 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section02 .inner .section02-left .product03-allbox .product03-1 .product03-text .txt01{
+    font-size: 23px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-1 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-1 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* 3-2 */
+.section02 .inner .section02-left .product03-allbox .product03-2{
+    /* float: left; */
+    padding: 2%;
+}
+.section02 .inner .section02-left .product03-allbox .product03-2:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section02 .inner .section02-left .product03-allbox .product03-2 .product03-text{
+    padding-top: 21px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-2 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section02 .inner .section02-left .product03-allbox .product03-2 .product03-text .txt01{
+    font-size: 23px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-2 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-2 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* 3-3 */
+.section02 .inner .section02-left .product03-allbox .product03-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.section02 .inner .section02-left .product03-allbox .product03-3{
+    /* float: left; */
+    padding: 2%;
+}
+.section02 .inner .section02-left .product03-allbox .product03-3:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section02 .inner .section02-left .product03-allbox .product03-3 .product03-text{
+    padding-top: 21px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-3 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section02 .inner .section02-left .product03-allbox .product03-3 .product03-text .txt01{
+    font-size: 23px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-3 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-3 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+/* 3-4 */
+.section02 .inner .section02-left .product03-allbox .product03-4{
+    /* float: left; */
+    padding: 2%;
+}
+.section02 .inner .section02-left .product03-allbox .product03-4:hover .product03-text{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section02 .inner .section02-left .product03-allbox .product03-4 .product03-text{
+    padding-top: 21px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-4 .product03-text span{
+    display: block;
+    font-family: 'Californian FB';
+}
+.section02 .inner .section02-left .product03-allbox .product03-4 .product03-text .txt01{
+    font-size: 23px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-4 .product03-text .txt02{
+    font-size: 12px;
+    float: left;
+    padding-top: 8px;
+}
+.section02 .inner .section02-left .product03-allbox .product03-4 .product03-text .txt03{
+    font-size: 18px;
+    float: right;
+}
+
+/* --------------section03--------------- */
+.section03 .inner{
+    width: 92%;
+    padding-top: 394px;
+}
+.section03 .inner h3{
+    text-align: center;
+    font-family: 'Californian FB';
+    font-size: 28px;
+    padding-bottom: 25px;
+}
+.section03 .inner p{
+    text-align: center;
+    font-family: 'Californian FB';
+    font-size: 18px;
+    padding-bottom: 56px;
+}
+.section03 .inner .category-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.section03 .inner .category-wrap .section03-boxwrap{
+    width: 311px;
+    height: 100%;
+}
+.section03 .inner .category-wrap .necklace-wrap a .img-box{
+   background: url(../images/product_01/section03-necklace.jpg)
+   no-repeat center/cover;
+   background-size: 100%;
+   width: 100%;
+   height: 289px;
+   /* height: 100%; */
+   transition: .5s;
+}
+.section03 .inner .category-wrap .necklace-wrap:hover a .img-box{
+    scale: 1.05;
+}
+.section03 .inner .category-wrap .necklace-wrap:hover span{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section03 .inner .category-wrap span{
+    display: block;
+    font-size: 20px;
+    font-family: 'Californian FB';
+    text-align: center;
+    line-height: 58px;
+}
+.section03 .inner .category-wrap .earring-wrap a .img-box{
+    background: url(../images/product_01/section03-earring.jpg)
+   no-repeat center/cover;
+   background-size: 100%;
+   width: 100%;
+   max-width: 309px;
+   height: 289px;
+   transition: .5s;
+}
+.section03 .inner .category-wrap .earring-wrap:hover a .img-box{
+    scale: 1.05;
+}
+.section03 .inner .category-wrap .earring-wrap:hover span{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section03 .inner .category-wrap .ring-wrap a .img-box{
+    background: url(../images/product_01/section03-ring.jpg)
+   no-repeat center/cover;
+   background-size: 100%;
+   width: 100%;
+   height: 289px;
+   transition: .5s;
+}
+.section03 .inner .category-wrap .ring-wrap:hover a .img-box{
+    scale: 1.05;
+}
+.section03 .inner .category-wrap .ring-wrap:hover span{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section03 .inner .category-wrap .bracelet-wrap a .img-box{
+    background: url(../images/product_01/section03-bracelet.jpg)
+   no-repeat center/cover;
+   background-size: 100%;
+   width: 100%;
+   height: 289px;
+   transition: .5s;
+}
+.section03 .inner .category-wrap .bracelet-wrap:hover a .img-box{
+    scale: 1.05;
+}
+.section03 .inner .category-wrap .bracelet-wrap:hover span{
+    color: #00a4b7;
+    transition: .5s;
+}
+.section03 .inner .category-wrap .weddingring-wrap a .img-box{
+    background: url(../images/product_01/section03-weddingring.jpg)
+   no-repeat center/cover;
+   background-size: 100%;
+   width: 100%;
+   height: 289px;
+   transition: .5s;
+}
+.section03 .inner .category-wrap .weddingring-wrap:hover a .img-box{
+    scale: 1.05;
+}
+.section03 .inner .category-wrap .weddingring-wrap:hover span{
+    color: #00a4b7;
+    transition: .5s;
+}
+
+/* --------------section04--------------- */
+.section04 .inner{
+    width: 85%;
+    padding-top: 330px;
+}
+.section04 .inner > h3{
+    text-align: center;
+    font-family: 'Californian FB';
+    font-size: 28px;
+    padding-bottom: 98px;
+}
+.section04 .inner .story-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.section04 .inner .story-wrap .section04-boxwrap{
+    width: 524px;
+    height: 642px;
+    position: relative;
+}
+.section04 .inner .story-wrap .section04-boxwrap .img-box1{
+    background: url(../images/product_01/timeless\ tableware.jpg)no-repeat center/cover;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+.section04 .inner .story-wrap .section04-boxwrap .img-box2{
+    background: url(../images/classics.jpg)no-repeat center/cover;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+.section04 .inner .story-wrap .section04-boxwrap .img-box3{
+    background: url(../images/aboutlove.jpg)no-repeat center/cover;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+.section04 .inner .story-wrap .section04-boxwrap .txt-wrap{
+    background: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    text-align: center;
+    transition: .5s;
+}
+.section04 .inner .story-wrap .section04-boxwrap:hover .txt-wrap{
+    background: rgba(146,229,223,0.5);
+}
+.section04 .inner .story-wrap .section04-boxwrap h3{
+    font-family: 'Californian FB';
+    font-size: 28px;
+    padding: 25px 0;
+}
+.section04 .inner .story-wrap .section04-boxwrap .txt-wrap p{
+    font-family: 'Californian FB';
+    text-align: center;
+    padding-bottom: 26px;
+    line-height: 25px;
+}
+
+/* --------------section05--------------- */
+.section05 .inner{
+    width: 92%;
+    padding-top: 330px;
+}
+/* section05-top */
+.section05 .inner .section05-top{
+    width: 100%;
+    height: 484px;
+    background: url(../images/section05-top.jpg)no-repeat center/cover;
+    background-size: 100%;
+    position: relative;
+}
+.section05 .inner .section05-top .section05-top-txt{
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    line-height: 30px;
+}
+.section05 .inner .section05-top .section05-top-txt h2{
+    font-size: 50px;
+    font-family: 'BookAntiqua';
+    color: #00a4b7;
+    padding-bottom: 37px;
+    font-weight: 500;
+}
+.section05 .inner .section05-top .section05-top-txt p{
+    font-size: 19px;
+    font-family: 'BookAntiqua';
+    color: #00a4b7;
+    text-align: center;
+}
+.section05 .inner .section05-top .section05-img-wrap{
+    max-width: 808px;
+    /* width: 100%;
+    height: auto; */
+    position: absolute;
+    right: 2.5%;
+    top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+/* left */
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left{}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .imgbox{
+    background: url(../images/weddingring.jpg)no-repeat center/cover;
+    background-size: 100%;
+    width: 382px;
+    height: 376px;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .imgbox::after{
+    content: '';
+    display: block;
+    background: rgba(211,232,232,0.6);
+    position: absolute; 
+    width: 382px;
+    height: 376px;
+    z-index: 29;
+    transition: .5s;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .imgbox:hover::after{
+    background: none;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left span{
+    display: block;
+    text-align: center;
+    font-family: 'Californian FB';
+    font-size: 11px;
+    padding-top: 15px;
+    color: #3aaba5;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .details{
+    cursor: pointer;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .details::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px #3aaba5;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    width: 50px;
+    margin: 0 auto;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .details:hover::after{
+    transform: scaleX(1);
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-left .maintxt{
+    font-size: 20px;
+    padding-top: 20px;
+    color: #00a4b7;
+}
+/* right */
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right{}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right span{
+    display: block;
+    text-align: center;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right span{
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    font-family: 'Californian FB';
+    padding-top: 15px;
+    color: #3aaba5;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .details{
+    cursor: pointer;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .details::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px #3aaba5;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    width: 50px;
+    margin: 0 auto;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .details:hover::after{
+    transform: scaleX(1);
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .maintxt{
+    font-size: 20px;
+    padding-top: 20px;
+    color: #00a4b7;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .imgbox{
+    width: 382px;
+    height: 376px;
+    background: url(../images/weddinglayerdring.jpg)no-repeat center/cover;
+    background-size: 100%;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .imgbox::after{
+    content: '';
+    display: block;
+    background: rgba(211,232,232,0.6);
+    position: absolute; 
+    width: 382px;
+    height: 376px;
+    z-index: 29;
+    transition: .5s;
+}
+.section05 .inner .section05-top .section05-img-wrap .section05-top-right .imgbox:hover::after{
+    background: none;
+}
+
+/* section05-bottom */
+.section05 .inner .section05-bottom{
+    width: 100%;
+    height: 484px;
+    overflow-y: hidden;
+    background-position: top;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+.section05 .inner .section05-bottom .section05-txt{
+    position: absolute;
+    z-index: 19;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 7%;
+    font-family: 'BookAntiqua';
+}
+.section05 .inner .section05-bottom h2{
+    font-size: 50px;
+    font-family: 'BookAntiqua';
+    padding-bottom: 49px;
+    font-weight: 500;
+}
+.section05 .inner .section05-bottom p{
+    font-size: 19px;
+    font-family: 'Californian FB';
+    padding-bottom: 50px;
+    font-weight: 100;
+}
+.section05 .inner .section05-bottom p span{
+    font-size: 15px;
+}
+.section05 .inner .section05-bottom a{
+    color: #00a4b7;
+    font-family: 'Californian FB';
+    font-size: 11px;
+    cursor: pointer;
+}
+.section05 .inner .section05-bottom a::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px #3aaba5;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    width: 50px;
+    margin: 0 auto;
+}
+.section05 .inner .section05-bottom a:hover::after{
+    transform: scaleX(1);
+}
+.section05 .inner .section05-bottom video{
+    width: 100%;
+    position: absolute;
+    /* top: -48%; */
+    top: 0;
+    left: 0;
+    filter: brightness(0.8);
+}
+
+/* --------------footer--------------- */
+.footer .inner{
+    width: 92%;
+    height: 248px;
+    background: #76d6db;
+    margin-top: 186px;
+}
+.footer .inner .footer-wrap{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* footer-tab */
+.footer .inner .footer-wrap .footer-tab{
+    width: 160px;
+}
+.footer .inner .footer-wrap .footer-tab ul{
+    margin-top: 40px;
+}
+.footer .inner .footer-wrap .footer-tab ul li{
+    padding-bottom: 26px;
+}
+.footer .inner .footer-wrap .footer-tab ul li a{
+    font-size: 16px;
+    font-family: 'Californian FB';
+    color: #00a4b7;
+    font-weight: 500;
+}
+.footer .inner .footer-wrap .footer-tab ul li a::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px #3aaba5;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    margin-top: 2px;
+}
+.footer .inner .footer-wrap .footer-tab ul li a.active{
+    color: aliceblue;
+}
+.footer .inner .footer-wrap .footer-tab ul li a.active::after{
+    transform: scaleX(1);
+}
+
+/* contents-box1 */
+.footer .inner .footer-wrap .contents-box1{
+    width: 1123px;
+}
+.footer .inner .footer-wrap .contents-box1 .footer-img1{
+    width: 345px;
+    height: 100%;
+    background: url(../images/diamond\ guide.jpg)no-repeat center/cover;
+    float: left;
+}
+.footer .inner .footer-wrap .contents-box1 .footer-txt1{
+    width: 66%;
+    height: 100%;
+    display: inline;
+    float: right;
+    padding-top: 40px;
+}
+.footer .inner .footer-wrap .contents-box1 .footer-txt1 p{
+    font-size: 12px;
+    font-family: 'BookAntiqua';
+    line-height: 20px;
+}
+.footer .inner .footer-wrap .contents-box1 .footer-txt1 .p-tag-top1{
+    padding-bottom: 34px;
+}
+.footer .inner .footer-wrap .contents-box1 .footer-txt1 span{
+    font-size: 12px;
+    font-family: 'Californian FB';
+    line-height: 72px;
+    cursor: pointer;
+    color: #fff;
+    cursor: pointer;
+}
+/* contents-box2 */
+.footer .inner .footer-wrap .contents-box2{
+    width: 1123px;
+}
+.footer .inner .footer-wrap .contents-box2 .footer-img2{
+    width: 345px;
+    height: 100%;
+    background: url(../images/styleandsetting.jpg)no-repeat center/cover;
+    float: left;
+}
+.footer .inner .footer-wrap .contents-box2 .footer-txt2{
+    width: 66%;
+    height: 100%;
+    display: inline;
+    float: right;
+    padding-top: 40px;
+}
+.footer .inner .footer-wrap .contents-box2 .footer-txt2 p{
+    font-size: 12px;
+    font-family: 'BookAntiqua';
+    line-height: 20px;
+}
+.footer .inner .footer-wrap .contents-box2 .footer-txt2 .p-tag-top2{
+    padding-bottom: 34px;
+}
+.footer .inner .footer-wrap .contents-box2 .footer-txt2 span{
+    font-size: 12px;
+    font-family: 'Californian FB';
+    color: #fff;
+    line-height: 72px;
+    cursor: pointer;
+}
+/* contents-box3 */
+.footer .inner .footer-wrap .contents-box3{
+    width: 1123px;
+}
+.footer .inner .footer-wrap .contents-box3 .footer-img3{
+    width: 345px;
+    height: 100%;
+    background: url(../images/lifetime.jpg)no-repeat center/cover;
+    float: left;
+}
+.footer .inner .footer-wrap .contents-box3 .footer-txt3{
+    width: 66%;
+    height: 100%;
+    display: inline;
+    float: right;
+    padding-top: 40px;
+}
+.footer .inner .footer-wrap .contents-box3 .footer-txt3 p{
+    font-size: 12px;
+    font-family: 'BookAntiqua';
+    line-height: 20px;
+}
+.footer .inner .footer-wrap .contents-box3 .footer-txt3 .p-tag-top3{
+    padding-bottom: 34px;
+}
+.footer .inner .footer-wrap .contents-box3 .footer-txt3 span{
+    font-size: 12px;
+    font-family: 'Californian FB';
+    line-height: 72px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* footer-quickmenu */
+.footer .inner .footer-wrap .footer-quickmenu{
+    width: 248px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .inner .footer-wrap .footer-quickmenu .quick-left{
+    margin-top: 40px;
+}
+.footer .inner .footer-wrap .footer-quickmenu .quick-left a{
+    display: block;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-family: 'NotoSansKRThin';
+}
+.footer .inner .footer-wrap .footer-quickmenu .quick-right{
+    margin-top: 40px;
+}
+.footer .inner .footer-wrap .footer-quickmenu .quick-right a{
+    display: block;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-family: 'NotoSansKRThin';
+}
+
+/* btn */
+.fix-btn{
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+}
+.fix-btn.show{
+    opacity: 1;
+    visibility: visible;
+}
+.fix-btn .d-btn{
+    padding-bottom: 20%;
+}
+.fix-btn .gotop-btn{}
